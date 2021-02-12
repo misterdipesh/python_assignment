@@ -249,12 +249,92 @@ def add_a_key_in_dict(given_dict,key_value):
 # dic1={1:10, 2:20}
 # dic2={3:30, 4:40}
 # dic3={5:50,6:60}
-for i in range(len(dict3)):
-    dict3.key[i]=dict2.key[i]+dict1.key[i]
-     dict3.value[i]=dict2.value[i]+dict1.value[i]
+# Expected Result : {1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60}
+dict4={}
+for dic in (dict1,dict2,dict3):
+    dict4.update(dic)
+print(dict4)
 
-    
 
+# 30. Write a Python script to check whether a given key already exists in a
+# dictionary.
+dicts={}
+keys=dicts.keys()
+given_key=str(input('given key'))
+if given_key in keys:
+    print('key exists')
+# 31. Write a Python program to iterate over dictionaries using for loops.
+
+for key,value in dictonary.items()
+    print(key,value)
+# 32. Write a Python script to generate and print a dictionary that contains a
+# number (between 1 and n) in the form (x, x*x).
+# Sample Dictionary ( n = 5) :
+# Expected Output : {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+def Sample_dictornary(n):
+    res_dec={x:x*x for x in range(1,n+1)}
+    return res_dec
+# 33. Write a Python script to print a dictionary where the keys are numbers
+# between 1 and 15 (both included) and the values are square of keys
+# Sample Dictionary
+# {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144,
+# 13: 169, 14: 196, 15: 225}
+res_dec={x:x*x for x in range(1,16)}
+print(res_dec)
+# 34. Write a Python script to merge two Python dictionaries.
+def Merge(dict1, dict2):
+    res = {**dict1, **dict2}
+    return res    
+print(Merge(dict1,dict2))
+# 35. Write a Python program to iterate over dictionaries using for loops.
+for key,value in dictonary.items()
+    print(key,value)
+# 36. Write a Python program to sum all the items in a dictionary.
+my_dict=dict(intput('my_dict'))
+print(sum(my_dict.values()))
+ #37. Write a Python program to multiply all the items in a dictionary.
+ product=1
+ for numbers in my_dict.values():
+     product=product*numbers
+print(product)
+# 38. Write a Python program to remove a key from a dictionary.
+delteing_key=input('key to be deleted')
+del my_dict[delteing_key]
+print(my_dict)
+# 39. Write a Python program to unpack a tuple in several variables.
+x, *y, z = given_tuple
+print(x,y,z)
+ #40. Write a Python program to add an item in a tuple.
+given_tuple= ('2',)
+item = 'z'
+new_tuple = given_tuple + (item,)
+# 41. Write a Python program to convert a tuple to a string.
+given_tuple = ('e', 'x', 'e', 'r', 'c', 'i', 's', 'e', 's')
+string =  ''.join(given_tuple)
+str(string)
+print(string)
+# 42. Write a Python program to convert a list to a tuple.
+list(given_tuple)
+print(given_tuple)
+# 43. Write a Python program to remove an item from a tuple.
+
+given_tuple=input('this is input tuple')
+list(given_tuple)
+given_tuple.remove(item)
+tuple(given_tuple)
+print(given_tuple)
+# 44. Write a Python program to slice a tuple.
+given_tuple = ('e', 'x', 'e', 'r', 'c', 'i', 's', 'e', 's')
+start= 3
+stop= 7
+my_new_tuple= given_tuple[start:stop]
+print(my_new_tuple)
+# 45. Write a Python program to find the index of an item of a tuple.
+item=input('index')
+index_of_item=my_tuple.index(item)
+print(index_of_item)
+#46. Write a Python program to find the length of a tuple
+print(len(given_tuple))
 
 
 
