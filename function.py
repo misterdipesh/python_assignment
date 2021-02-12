@@ -110,15 +110,39 @@ def multiply_one_arg(one_num):
     return given_num*one_num
 print(multiply_one_arg(5))
 # 13. Write a Python program to sort a list of tuples using Lambda.
-sorting_list=lambda x
+sorting_list=given_list.sort(key = lambda x: x[1])
 # 14. Write a Python program to sort a list of dictionaries using Lambda.
+sorted_dict = sorted(given_dict, key = lambda x: x[1])
 # 15. Write a Python program to filter a list of integers using Lambda.
+even_nums = list(filter(lambda x: x%2 == 0, nums))
 # 16. Write a Python program to square and cube every number in a given list of
 # integers using Lambda.
+# using Lambda.
+square_nums = list(map(lambda x: x ** 2, nums))
+print(square_nums)
+cube_nums = list(map(lambda x: x ** 3, nums))
+print(cube_nums)
 # 17. Write a Python program to find if a given string starts with a given character
 # using Lambda.
+check_string_start=lambda string,character:True if character in string[0] else False
+print(check_string_start('hello','h'))
+
+
 # 18. Write a Python program to check whether a given string is number or not
 # using Lambda.
+check_string_num=lambda x:True if x in ['1','2','3','4','5','6','7','8','9','0'] else False
+print(check_string_num('1'))
 # 19. Write a Python program to create Fibonacci series upto n using Lambda.
+from functools import reduce
+ 
+Fibonacci_series = lambda n: reduce(lambda x, _: x+[x[-1]+x[-2]],
+                                range(n-2), [0, 1])
+
+print(Fibonacci_series(2))
+
 # 20. Write a Python program to find intersection of two given arrays using
 # Lambda.
+array1=1,2,3,4,5,6
+array2=2,3,5,9
+intersection =list(filter(lambda x: x in array1,array2))
+print(intersection)
